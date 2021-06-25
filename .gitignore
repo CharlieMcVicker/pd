@@ -1,0 +1,5 @@
+.DS_store
+recordings/
+*.wav
+*.icloud
+externals/
