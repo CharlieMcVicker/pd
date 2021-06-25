@@ -1,0 +1,17 @@
+#N canvas 0 23 450 300 12;
+#X obj 81 31 inlet;
+#X obj 149 217 outlet;
+#X obj 222 17 r tonality;
+#X obj 151 133 i;
+#X obj 150 182 / 1;
+#X obj 152 87 * 1;
+#X obj 170 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 5 0;
+#X connect 2 0 5 1;
+#X connect 2 0 4 1;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 0;
