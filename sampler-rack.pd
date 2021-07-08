@@ -13,13 +13,13 @@
 -1 -1;
 #X obj 329 575 r~ mic_m;
 #X obj 793 365 hsl 395 16 0 1 0 0 empty time_monitor empty -2 -8 0
-10 -262144 -1 -1 3546 1;
+10 -262144 -1 -1 39400 1;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array sample2 89600 float 2;
 #X coords 0 1 89600 -1 200 40 1 0 0;
 #X restore 790 261 graph;
 #X obj 413 377 line;
-#X obj 169 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 169 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 771 332 tgl 15 0 sample1_record_t sample1_record_b empty 17
 7 0 10 -262144 -258113 -1 0 1;
@@ -34,7 +34,7 @@
 #X obj 962 528 tabread~ sample2;
 #X msg 1059 445 0;
 #X obj 790 384 hradio 25 1 0 16 empty beat empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 5;
 #X obj 223 397 metro 250;
 #X obj 297 424 i;
 #X obj 297 448 + 1;
@@ -187,21 +187,21 @@
 #X obj 1022 715 +~;
 #X obj 722 739 *~ 0.01;
 #X obj 1231 33 vsl 12 128 0 4 0 0 mic_a empty empty 0 -9 0 10 -262144
--1 -1 800 1;
+-1 -1 1700 1;
 #X obj 329 623 *~;
 #X obj 329 647 +~;
 #X obj 1247 41 vu 15 120 mic_vu empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 329 671 env~;
 #X obj 329 695 - 100;
 #X obj 1281 33 vsl 12 128 0 1 0 0 tab_a empty empty 0 -9 0 10 -262144
--1 -1 3400 1;
+-1 -1 3600 1;
 #X obj 409 623 *~;
 #X obj 409 647 +~;
 #X obj 1297 41 vu 15 120 tab_vu empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 409 671 env~;
 #X obj 409 695 - 100;
 #X obj 1331 33 vsl 12 128 0 1 0 0 sig_chirp_a empty empty 0 -9 0 10
--262144 -1 -1 700 1;
+-262144 -1 -1 400 1;
 #X obj 489 623 *~;
 #X obj 489 647 +~;
 #X obj 1347 41 vu 15 120 sig_chirp_vu empty -1 -8 0 10 -66577 -1 0
@@ -209,7 +209,7 @@
 #X obj 489 671 env~;
 #X obj 489 695 - 100;
 #X obj 1381 33 vsl 12 128 0 0.25 0 0 sig_chain_a empty empty 0 -9 0
-10 -262144 -1 -1 6000 1;
+10 -262144 -1 -1 4300 1;
 #X obj 609 623 *~;
 #X obj 609 647 +~;
 #X obj 1397 41 vu 15 120 sig_chain_vu empty -1 -8 0 10 -66577 -1 0
@@ -219,7 +219,7 @@
 #X obj 397 809 writesf~ 2;
 #X msg 463 777 start;
 #X msg 530 782 stop;
-#X obj 62 592 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 62 592 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 247 558 osc~ 800;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -336,45 +336,45 @@
 #X msg 568 425 \; sample5 const 0;
 #X obj 568 470 s sample5_record_b;
 #X obj 1281 231 tgl 15 1 s5_m1_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1281 251 tgl 15 0 s4_m1_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1281 271 tgl 15 0 s3_m1_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1281 291 tgl 15 0 s2_m1_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1281 311 tgl 15 0 s1_m1_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1301 231 tgl 15 0 s5_m2_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1301 251 tgl 15 0 s4_m2_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1301 271 tgl 15 0 s3_m2_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1301 291 tgl 15 0 s2_m2_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1301 311 tgl 15 0 s1_m2_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1321 231 tgl 15 0 s5_m3_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1321 251 tgl 15 0 s4_m3_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1321 271 tgl 15 0 s3_m3_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1321 291 tgl 15 0 s2_m3_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1321 311 tgl 15 0 s1_m3_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1341 231 tgl 15 0 s5_m4_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1341 251 tgl 15 0 s4_m4_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 1341 271 tgl 15 0 s3_m4_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1341 291 tgl 15 0 s2_m4_t reset_seq_t empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 1341 311 tgl 15 0 s1_m4_t reset_seq_t empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 165 349 spigot;
 #X obj 165 373 s reset_b;
 #X obj 1723 89 i;
@@ -387,7 +387,7 @@
 #X obj 1760 62 r measure_b;
 #X obj 1636 137 s measure_i;
 #X obj 1284 211 hsl 70 15 1 4 0 0 empty measure_i empty -2 -8 0 10
--262144 -1 -1 2300 1;
+-262144 -1 -1 6900 1;
 #X obj 2197 266 r measure_i;
 #X obj 1270 420 i;
 #X obj 1340 420 i;
@@ -443,9 +443,9 @@
 #X obj 2298 394 r s4_m3_t;
 #X floatatom 2277 462 5 0 0 0 - - -;
 #X obj 105 667 vsl 15 128 0 3 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3500 1;
+-1 -1 3000 1;
 #X obj 247 654 *~;
-#X msg 445 755 open sampler-rack-2021-07-05-02.wav;
+#X msg 445 755 open sampler-rack-2021-07-07-01.wav;
 #X connect 0 0 1 0;
 #X connect 3 0 116 0;
 #X connect 5 0 166 0;

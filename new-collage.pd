@@ -8,7 +8,7 @@
 #X obj 936 407 *~;
 #X obj 1136 407 *~;
 #X obj 707 185 vsl 15 128 0 1 0 0 dryA empty empty 0 -9 0 10 -262144
--1 -1 10700 1;
+-1 -1 8600 1;
 #X obj 1027 383 r dryA;
 #X obj 986 431 +~;
 #X obj 1096 431 +~;
@@ -21,7 +21,7 @@
 #X obj 346 604 s~ delL;
 #X obj 494 604 s~ delR;
 #X obj 727 185 vsl 15 128 0 1 0 0 delA empty empty 0 -9 0 10 -262144
--1 -1 900 1;
+-1 -1 1100 1;
 #X obj 936 327 *~;
 #X obj 1136 327 *~;
 #X obj 986 351 +~;
@@ -37,7 +37,7 @@
 #X obj 671 526 *~;
 #X obj 809 531 +~;
 #X obj 747 185 vsl 15 128 0 1 0 0 prodA empty empty 0 -9 0 10 -262144
--1 -1 1100 1;
+-1 -1 4800 1;
 #X obj 936 247 *~;
 #X obj 1136 247 *~;
 #X obj 986 271 +~;
@@ -57,7 +57,7 @@
 #X obj 999 635 s~ prodR;
 #X obj 1136 223 r~ prodR;
 #X obj 767 185 vsl 15 128 0 1 0 0 ambA empty empty 0 -9 0 10 -262144
--1 -1 1000 1;
+-1 -1 0 1;
 #X obj 1268 576 +~;
 #X obj 1268 626 +~;
 #X obj 1268 676 +~;
@@ -82,7 +82,7 @@
 #X obj 671 550 *~ 0.07;
 #X obj 881 550 *~ 0.07;
 #X obj 675 360 hsl 128 15 0 0.7 0 0 ambFB empty empty -2 -8 0 10 -262144
--1 -1 7900 1;
+-1 -1 4200 1;
 #X obj 603 826 *~;
 #X obj 499 774 r ambFB;
 #X obj 1330 721 r ambFB;
@@ -92,7 +92,7 @@
 #X obj 603 729 delread~ ambR 70;
 #X obj 1268 652 delread~ ambL 70;
 #X obj 675 380 hsl 128 15 0 4 0 0 ambIn empty empty -2 -8 0 10 -262144
--1 -1 7300 1;
+-1 -1 6400 1;
 #X obj 908 722 *~;
 #X obj 738 722 *~;
 #X obj 824 692 r ambIn;
@@ -201,7 +201,7 @@
 #X restore 331 308 pd sigtrap2;
 #X obj 331 332 s~ sigtrapR;
 #X obj 787 185 vsl 15 128 0 1 0 0 sigfunA empty empty 0 -9 0 10 -262144
--1 -1 1500 1;
+-1 -1 800 1;
 #X obj 1027 63 r sigfunA;
 #N canvas 283 287 772 454 sigtrap2 0;
 #X obj 25 37 inlet~;
