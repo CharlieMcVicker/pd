@@ -19,9 +19,6 @@
 #X obj 358 388 osc~;
 #X obj 358 412 *~;
 #X obj 337 446 +~;
-#X obj 204 197 sigmund~ -npeaks 2 peaks -npts 4906 env -maxfreq 20000
-;
-#X obj 614 248 > 60;
 #X obj 321 569 *~;
 #X obj 199 125 inlet~;
 #X obj 321 605 outlet~;
@@ -30,14 +27,17 @@
 #X msg 622 313 1 \, 0 500;
 #X obj 236 373 * \$1;
 #X obj 358 365 * \$1;
-#X connect 0 0 22 0;
-#X connect 1 0 22 1;
-#X connect 2 1 26 0;
-#X connect 2 1 25 0;
+#X obj 614 248 > 40;
+#X obj 204 197 sigmund~ -npeak 2 peaks -npts 4906 env -maxfreq 20000
+;
+#X connect 0 0 20 0;
+#X connect 1 0 20 1;
+#X connect 2 1 24 0;
+#X connect 2 1 23 0;
 #X connect 3 0 6 0;
 #X connect 3 1 11 0;
 #X connect 4 0 7 0;
-#X connect 4 0 27 0;
+#X connect 4 0 25 0;
 #X connect 5 0 8 1;
 #X connect 5 0 13 1;
 #X connect 6 0 4 0;
@@ -45,7 +45,7 @@
 #X connect 7 0 8 0;
 #X connect 8 0 14 0;
 #X connect 9 0 15 0;
-#X connect 9 0 28 0;
+#X connect 9 0 26 0;
 #X connect 10 0 16 1;
 #X connect 10 0 18 1;
 #X connect 11 0 9 0;
@@ -58,11 +58,11 @@
 #X connect 17 0 18 0;
 #X connect 18 0 19 1;
 #X connect 19 0 0 1;
-#X connect 20 0 3 0;
-#X connect 20 1 21 0;
-#X connect 21 0 2 0;
-#X connect 22 0 24 0;
-#X connect 23 0 20 0;
-#X connect 26 0 1 0;
-#X connect 27 0 12 0;
-#X connect 28 0 17 0;
+#X connect 20 0 22 0;
+#X connect 21 0 28 0;
+#X connect 24 0 1 0;
+#X connect 25 0 12 0;
+#X connect 26 0 17 0;
+#X connect 27 0 2 0;
+#X connect 28 0 3 0;
+#X connect 28 1 27 0;
